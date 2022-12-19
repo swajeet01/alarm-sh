@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-VERSION="1.0.1"
+VERSION="1.0.2"
 AUTHOR="Swajeet Swarnkar"
 
 # Modify message shown when alarm goes off.
@@ -15,7 +15,7 @@ usage() {
 
 [[ $# -ne 1 ]] && usage && exit 64
 
-[[ ! $1 =~ ^([01][0-9]|2[0-3]):?[0-5][0-9]$ ]] && echo "Bad time parameter \"$1\"" && exit 64
+[[ ! $1 =~ ^([01][0-9]|2[0-3]):[0-5][0-9]$ ]] && echo "Bad time parameter \"$1\"" && exit 64
 
 echo "Alarm set for $1."
 
